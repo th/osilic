@@ -32,7 +32,8 @@ def main() -> None:
                     licenses = license_from_dict(resp.json())
                     for license in licenses:
                         if len(license.keywords) > 0:
-                            unique_keywords.update(license.keywords)
+                            for keyword in license.keywords:
+                                unique_keywords.update(str(keyword))
                     print("Please choose a keyword key from this list:",unique_keywords)
                 else:
                     print("Error fetching licenses while listing all keywords:", resp.text)
