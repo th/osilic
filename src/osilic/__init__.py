@@ -16,7 +16,7 @@ def main() -> None:
 
     base_url = "https://opensource.org/api/license"
 
-    if args.Keyword:
+    if args.keyword:
         # Search licenses by steward
         resp = requests.get(f"{base_url}?keyword={args.Keyword}")
         if resp.status_code == 200:
