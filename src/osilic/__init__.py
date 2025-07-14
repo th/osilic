@@ -1,7 +1,7 @@
 import sys
 import requests
 import argparse
-from osilic.model import license_from_dict, print_licenses_table, print_license_details_table
+from osilic.model import license_from_dict, print_licenses_table, print_license_details_table, print_licenses_table_with_steward
 
 def main() -> None:
     parser = argparse.ArgumentParser(
