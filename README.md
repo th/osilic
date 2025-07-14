@@ -33,15 +33,22 @@ After installation, use the `osilic` command:
   ```bash
   osilic
   ```
+  See [osilic](https://github.com/dineshr93/osilic/blob/main/screenshot/osilic_all_licenses.png) for details.
+
 - Show details for a license by SPDX ID:
   ```bash
   osilic gpl-3-0
   ```
+  See [osilic gpl-3-0](https://github.com/dineshr93/osilic/blob/main/screenshot/osilic_lic_details.png) for details.
+
 - Search licenses by name:
   ```bash
   osilic -s gpl
   ```
+  See [osilic -s gpl](https://github.com/dineshr93/osilic/blob/main/screenshot/osilic_lic_search.png) for details.
+  
 - If a license is not found, the CLI will suggest similar licenses automatically.
+  See [osilic mi](https://github.com/dineshr93/osilic/blob/main/screenshot/osilic_missing_lic.png) for details.
 
 ### As a Python Package
 You can also use OLC in your own Python code:
