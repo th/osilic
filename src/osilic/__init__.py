@@ -10,9 +10,57 @@ def main() -> None:
     )
     parser.add_argument("spdx_id", nargs="?", help="SPDX ID of the license to show details for.")
     parser.add_argument("-s", "--search", metavar="SEARCH_KEY", help="Search licenses by name.")
+    parser.add_argument("-w", "--steward", metavar="STEWARD_KEY", help="Search licenses by steward.")
+    parser.add_argument("-k", "--keyword", metavar="FILTER_KEY", help="Filter licenses by keyword.")
     args = parser.parse_args()
 
     base_url = "https://opensource.org/api/license"
+
+    if args.Keyword:
+        # Search licenses by steward
+        resp = requests.get(f"{base_url}?keyword={args.Keyword}")
+        if resp.status_code == 200:
+            licenses = license_from_dict(resp.json())
+            if len(licenses)>0:
+                print_licenses_table(licenses)
+            else:
+                print("No licenses found for keyword:", args.Keyword)
+                # Get all licenses and then stewards for display
+                resp = requests.get(base_url)
+                unique_keywords = set()
+                if resp.status_code == 200:
+                    licenses = license_from_dict(resp.json())
+                    for license in licenses:
+                        if len(license.keywords) > 0:
+                            unique_keywords.update(license.keywords..)
+                    print("Please choose a keyword key from this list:",unique_keywords)
+                else:
+                    print("Error fetching licenses while listing all keywords:", resp.text)
+        else:
+            print("Error {resp.text} while searching licenses for keyword: {args.keyword}")
+
+    if args.steward:
+        # Search licenses by steward
+        resp = requests.get(f"{base_url}?steward={args.steward}")
+        if resp.status_code == 200:
+            licenses = license_from_dict(resp.json())
+            if len(licenses)>0:
+                print_licenses_table(licenses)
+            else:
+                print("No licenses found for steward:", args.steward)
+                # Get all licenses and then stewards for display
+                resp = requests.get(base_url)
+                unique_stewards = set()
+                if resp.status_code == 200:
+                    licenses = license_from_dict(resp.json())
+                    for license in licenses:
+                        if len(license.stewards) > 0:
+                            unique_stewards.update(license.stewards..)
+                    print("Please choose a steward key from this list:",unique_stewards)
+                else:
+                    print("Error fetching licenses while listing all stewards:", resp.text)
+        else:
+            print("Error {resp.text} while searching licenses for steward:{args.steward}")
 
     if args.search:
         # Search licenses by name

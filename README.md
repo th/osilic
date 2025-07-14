@@ -42,17 +42,35 @@ After installation, use the `osilic` command:
 
 - Show details for a license by SPDX ID:
   ```bash
-  osilic gpl-3-0
+  osilic gpl-2-0
   ```
   ![osilic gpl-3-0](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_details.png)
 
 - Search licenses by name:
   ```bash
-  osilic -s gpl
+  osilic -s mit
   ```
   ![osilic -s gpl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_search.png)
   
 - If a license is not found, the CLI will suggest similar licenses automatically.
+  ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
+
+- Search licenses by steward:
+  ```bash
+  osilic -s mit
+  ```
+  ![osilic -s gpl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_search.png)
+  
+- If a license is not found, the CLI will suggest list of stewards to use automatically.
+  ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
+
+- Search licenses by keyword:
+  ```bash
+  osilic -s mit
+  ```
+  ![osilic -s gpl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_search.png)
+  
+- If a license is not found, the CLI will suggest list of keywords to use automatically.
   ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
 
 ### As a Python Package
@@ -77,6 +95,7 @@ print_licenses_table(licenses)
 
 ## Development
 - Source code: [GitHub](https://github.com/dineshr93/osilic)
+- Discusstion: [OSI discussion](https://discuss.opensource.org/t/introducing-the-new-api-for-osi-approved-licenses/1169/1)
 - Issues and contributions welcome!
 
 ## License
