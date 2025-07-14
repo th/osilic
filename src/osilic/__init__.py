@@ -32,7 +32,7 @@ def main() -> None:
                     licenses = license_from_dict(resp.json())
                     for license in licenses:
                         if len(license.keywords) > 0:
-                            unique_keywords.update(license.keywords..)
+                            unique_keywords.update(license.keywords)
                     print("Please choose a keyword key from this list:",unique_keywords)
                 else:
                     print("Error fetching licenses while listing all keywords:", resp.text)
@@ -55,7 +55,7 @@ def main() -> None:
                     licenses = license_from_dict(resp.json())
                     for license in licenses:
                         if len(license.stewards) > 0:
-                            unique_stewards.update(license.stewards..)
+                            unique_stewards.update(license.stewards)
                     print("Please choose a steward key from this list:",unique_stewards)
                 else:
                     print("Error fetching licenses while listing all stewards:", resp.text)
