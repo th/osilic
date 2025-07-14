@@ -35,7 +35,7 @@ def main() -> None:
                         print(f"Debug: {keywords}")
                         if len(keywords) > 0:
                             for keyword in keywords:
-                                unique_keywords.update(keyword)
+                                unique_keywords.update(str(keyword))
                     print("Please choose a keyword key from this list:",unique_keywords)
                 else:
                     print("Error fetching licenses while listing all keywords:", resp.text)
