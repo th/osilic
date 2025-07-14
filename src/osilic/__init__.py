@@ -18,13 +18,13 @@ def main() -> None:
 
     if args.keyword:
         # Search licenses by steward
-        resp = requests.get(f"{base_url}?keyword={args.Keyword}")
+        resp = requests.get(f"{base_url}?keyword={args.keyword}")
         if resp.status_code == 200:
             licenses = license_from_dict(resp.json())
             if len(licenses)>0:
                 print_licenses_table(licenses)
             else:
-                print("No licenses found for keyword:", args.Keyword)
+                print("No licenses found for keyword:", args.keyword)
                 # Get all licenses and then stewards for display
                 resp = requests.get(base_url)
                 unique_keywords = set()
