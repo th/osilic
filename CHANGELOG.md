@@ -1,4 +1,6 @@
-- fda6ddc Update pyproject.toml (Dinesh Ravi, 2025-07-14)
+- 35acd2f Update pyproject.toml (Dinesh Ravi, 2025-07-14)
+- f60ba74 Update README.md (Dinesh Ravi, 2025-07-14)
+- b3b4d68 Update pyproject.toml (Dinesh Ravi, 2025-07-14)
 - ccdadff Update README.md (Dinesh Ravi, 2025-07-14)
 - e5c249e update license link in readme (Dinesh Ravi, 2025-07-14)
 - 4f73381 Update pyproject.toml (Dinesh Ravi, 2025-07-14)
