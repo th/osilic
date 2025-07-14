@@ -76,7 +76,7 @@ print_licenses_table(licenses)
 - For more information on OSI licenses, visit [opensource.org](https://opensource.org/licenses).
 
 ## Development
-- Source code: [GitHub](https://github.com/dineshr93/olc)
+- Source code: [GitHub](https://github.com/dineshr93/osilic)
 - Issues and contributions welcome!
 
 ## License
