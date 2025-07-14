@@ -8,6 +8,10 @@ osilic is a Python package and command-line tool for listing, searching, and vie
 - Search licenses by name
 - Automatic suggestions for similar licenses if a license is not found
 - Usable as a standalone CLI or as a Python package
+- Filter licenses by keywords
+- Auto suggest available keywords upon entering wrong keyword filters
+- Filter licenses by stewards
+- Auto suggest available licenses upon entering wrong stewards filters
 
 ## Installation
 
