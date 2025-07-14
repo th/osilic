@@ -78,7 +78,7 @@ See [LICENSE](LICENSE) for details.
 - Dinesh R
 
 ## Changelog
-See [CHANGELOG.md](CHANGELOG.md) for a list of all commits and changes.
+See [CHANGELOG.md](https://github.com/dineshr93/osilic/blob/main/CHANGELOG.md) for a list of all commits and changes.
 
 ---
 For more information on OSI licenses, visit [opensource.org](https://opensource.org/licenses).
