@@ -1,4 +1,5 @@
-- 8d16b3a Update pyproject.toml (Dinesh Ravi, 2025-07-14)
+- 535fb58 update license link in readme (Dinesh Ravi, 2025-07-14)
+- 4f73381 Update pyproject.toml (Dinesh Ravi, 2025-07-14)
 - 0107c2c Update README.md (Dinesh Ravi, 2025-07-14)
 - 4b1d89c update to 0.1.1 (Dinesh Ravi, 2025-07-14)
 - c180117 Update README.md (Dinesh Ravi, 2025-07-14)

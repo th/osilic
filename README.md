@@ -79,7 +79,7 @@ This project is licensed under the Creative Commons Attribution-ShareAlike 3.0 U
 
 Copyright © 2025 Dinesh R
 
-See [LICENSE](LICENSE) for details.
+See [LICENSE](https://github.com/dineshr93/osilic/blob/main/LICENSE) for details.
 
 ## Author
 - Dinesh R
