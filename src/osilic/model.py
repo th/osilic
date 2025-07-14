@@ -208,6 +208,30 @@ def print_licenses_table(licenses: List[License], width: int = 45) -> None:
         table.append(row)
     print(tabulate(table, headers=headers, tablefmt="grid"))
 
+def print_licenses_table_with_steward(licenses: List[License], width: int = 45) -> None:
+    """
+    Print a list of License objects in a nicely formatted table, wrapping long text fields except Links.
+    Excludes Submission URL and Board Minutes columns.
+    """
+    headers = [
+        "ID", "Name", "SPDX ID", "Approved", "Stewards", "Links"
+    ]
+    table = []
+    for lic in licenses:
+        links_str = str(lic.links) if lic.links else ""
+        links_str = "\n".join([part.strip() for part in links_str.split(",")]) if links_str else ""
+        row = [
+            lic.id or "",
+            lic.name or "",
+            lic.spdx_id or "",
+            str(lic.approved) if lic.approved is not None else "",
+            ", ".join([k.value for k in lic.stewards]) if lic.stewards else "",
+            links_str
+        ]
+        # Wrap each cell except Links
+        row = ["\n".join(textwrap.wrap(str(cell), width)) if i != 5 and len(str(cell)) > width else str(cell) for i, cell in enumerate(row)]
+        table.append(row)
+    print(tabulate(table, headers=headers, tablefmt="grid"))
 
 def print_license_details_table(license: License, width: int = 45) -> None:
     """

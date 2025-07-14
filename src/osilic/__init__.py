@@ -48,7 +48,7 @@ def main() -> None:
         if resp.status_code == 200:
             licenses = license_from_dict(resp.json())
             if len(licenses)>0:
-                print_licenses_table(licenses)
+                print_licenses_table_with_steward(licenses)
             else:
                 print("No licenses found for steward:", args.steward)
                 # Get all licenses and then stewards for display
