@@ -1,6 +1,6 @@
-# osilicense: OSI License CLI & Python Package
+# osilic: OSI License CLI & Python Package
 
-osilicense is a Python package and command-line tool for listing, searching, and viewing details of OSI Approved Licenses® using the official OSI API.
+osilic is a Python package and command-line tool for listing, searching, and viewing details of OSI Approved Licenses® using the [official OSI API](https://opensource.org/blog/introducing-the-new-api-for-osi-approved-licenses).
 
 ## Features
 - List all OSI Approved Licenses®
