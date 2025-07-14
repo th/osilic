@@ -39,7 +39,7 @@ def main() -> None:
         else:
             print("Error {resp.text} while searching licenses for keyword: {args.keyword}")
 
-    if args.steward:
+    elif args.steward:
         # Search licenses by steward
         resp = requests.get(f"{base_url}?steward={args.steward}")
         if resp.status_code == 200:
@@ -62,7 +62,7 @@ def main() -> None:
         else:
             print("Error {resp.text} while searching licenses for steward:{args.steward}")
 
-    if args.search:
+    elif args.search:
         # Search licenses by name
         resp = requests.get(f"{base_url}?name={args.search}")
         if resp.status_code == 200:
