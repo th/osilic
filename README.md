@@ -46,7 +46,7 @@ After installation, use the `osilic` command:
   ```
   ![osilic gpl-3-0](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_details.png)
 
-- Search licenses by name:
+- Search licenses by name (-s):
   ```bash
   osilic -s mit
   ```
@@ -55,23 +55,23 @@ After installation, use the `osilic` command:
 - If a license is not found, the CLI will suggest similar licenses automatically.
   ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
 
-- Search licenses by steward:
+- Filter licenses by steward (-w):
   ```bash
-  osilic -s mit
+  osilic -w zope-foundation
   ```
-  ![osilic -s gpl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_search.png)
+  ![osilic -w zope-foundationl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic%20steward.png)
   
 - If a license is not found, the CLI will suggest list of stewards to use automatically.
-  ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
+  ![osilic -w dummy](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic%20steward%20suggest.png)
 
-- Search licenses by keyword:
+- Filter licenses by keyword (-k):
   ```bash
-  osilic -s mit
+  osilic -k other-miscellaneous
   ```
-  ![osilic -s gpl](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_lic_search.png)
+  ![osilic -k other-miscellaneous](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic%20keyword.png)
   
 - If a license is not found, the CLI will suggest list of keywords to use automatically.
-  ![osilic mi](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic_missing_lic.png)
+  ![osilic -k test](https://raw.githubusercontent.com/dineshr93/osilic/refs/heads/main/screenshot/osilic%20keyword%20suggest.png)
 
 ### As a Python Package
 You can also use OLC in your own Python code:
@@ -88,6 +88,8 @@ print_licenses_table(licenses)
 - List all licenses: `https://opensource.org/api/license`
 - License details: `https://opensource.org/api/license/{spdx-id}`
 - Search licenses: `https://opensource.org/api/license?name={search_key}`
+- Filter licenses by keywords: `https://opensource.org/api/license?keyword={filter_keyword}`
+- Filter licenses by stewards: `https://opensource.org/api/license?steward={filter_steward_key}`
 
 ## Reference & Further Reading
 - Official OSI API Blog Post: [Introducing the New API for OSI Approved Licenses](https://opensource.org/blog/introducing-the-new-api-for-osi-approved-licenses)
