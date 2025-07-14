@@ -225,7 +225,7 @@ def print_licenses_table_with_steward(licenses: List[License], width: int = 45) 
             lic.name or "",
             lic.spdx_id or "",
             str(lic.approved) if lic.approved is not None else "",
-            ", ".join([k.value for k in lic.stewards]) if lic.stewards else "",
+            ", ".join([k for k in lic.stewards]) if lic.stewards else "",
             links_str
         ]
         # Wrap each cell except Links
