@@ -32,7 +32,7 @@ def main() -> None:
                     licenses = license_from_dict(resp.json())
                     for license in licenses:
                         keywords=license.keywords
-                        print(f"Debug: {keywords}")
+                        #print(f"Debug: {keywords}")
                         if len(keywords) > 0:
                             for keyword in keywords:
                                 unique_keywords.add(str(keyword.value))
