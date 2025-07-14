@@ -11,6 +11,11 @@ osilic is a Python package and command-line tool for listing, searching, and vie
 
 ## Installation
 
+### From Pypi index
+```bash
+pip install osilic
+```
+
 ### Using pip (editable mode for development)
 ```bash
 pip install -e .
